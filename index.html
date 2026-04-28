@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Donor System</title>
+  <style>
+  .hidden { display: none; }
+  .container { max-width: 600px; margin: auto; font-family
+    : Arial; }
+  input, select, button { display: block; margin: 6px 0; padding: 8px; width: 100%; }
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>💉 Smart Donor Management</h1>
+
+    <!-- Navigation -->
+    <div class="nav">
+      <button id="donorPageBtn">Donor</button>
+      <button id="adminPageBtn">Admin</button>
+    </div>
+
+    <!-- Donor Section -->
+    <div id="donorSection">
+      <h2>Register as Donor</h2>
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="email" id="email" placeholder="Email Address">
+      <input type="text" id="phone" placeholder="+91XXXXXXXXXX">
+      <input type="text" id="location" placeholder="Location" readonly>
+      <button id="getLocation">📍 Get My Location</button>
+      <div id="recaptcha-container"></div>
+      <button id="sendOtp">Send OTP</button>
+      <input type="text" id="otp" placeholder="Enter OTP">
+      <button id="verifyOtp">Verify OTP</button>
+      <p id="status"></p>
+    </div>
+
+    <!-- Admin Login -->
+    <div id="adminSection" class="hidden">
+      <h2>Admin Login</h2>
+      <input type="text" id="adminUser" placeholder="Username">
+      <input type="password" id="adminPass" placeholder="Password">
+      <button id="loginBtn">Login</button>
+      <p id="loginStatus"></p>
+    </div>
+
+    <!--select blood group-->
+    <div>
+      <h3>Blood Group</h3>
+        <select name="blood group">
+            <option value="A+">A+</option>
+            <option value="B+">B+</option>
+            <option value="O+">O+</option>
+            <option value="A-">A-</option>
+            <option value="B-">B-</option>
+            <option value="O-">O-</option>
+        </select>
+    </div>
+
+    
+
+    <!-- Admin Dashboard -->
+    <div id="dashboardSection" class="hidden">
+      <h2>All Donors</h2>
+      <input type="text" id="searchInput" placeholder="Search by name or location">
+      <table id="donorTable">
+        <thead>
+          <tr>
+            <th>Name</th><th>Email</th><th>Phone</th><th>Location</th><th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="logoutBtn">Logout</button>
+    </div>
+
+  </div>
+<script type="module" src="firebase.js"></script>
+<script type="module" src="main.js"></script>
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+</body>
+</html>
