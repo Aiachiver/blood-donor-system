@@ -1,0 +1,280 @@
+/* ==============================
+   Smart Blood Donor Management
+============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    background:linear-gradient(135deg,#7f1d1d,#b91c1c,#ef4444);
+}
+
+.container{
+    width:100%;
+    max-width:850px;
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.3);
+}
+
+/* Heading */
+
+h1{
+    text-align:center;
+    color:#b91c1c;
+    font-size:34px;
+    margin-bottom:30px;
+}
+
+h2{
+    color:#374151;
+    margin-bottom:15px;
+}
+
+h3{
+    margin-top:20px;
+    margin-bottom:10px;
+    color:#374151;
+}
+
+/* Navigation */
+
+.nav{
+    display:flex;
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.nav button{
+    flex:1;
+}
+
+/* Inputs */
+
+input,
+select{
+    width:100%;
+    padding:12px 15px;
+    margin:10px 0;
+    border:1px solid #d1d5db;
+    border-radius:10px;
+    font-size:15px;
+    transition:.3s;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:#dc2626;
+    box-shadow:0 0 8px rgba(220,38,38,.25);
+}
+
+/* Buttons */
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    border-radius:10px;
+    background:#dc2626;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#991b1b;
+    transform:translateY(-2px);
+}
+
+button:active{
+    transform:scale(.98);
+}
+
+/* Different Buttons */
+
+#getLocation{
+    background:#16a34a;
+}
+
+#getLocation:hover{
+    background:#15803d;
+}
+
+#sendOtp{
+    background:#2563eb;
+}
+
+#sendOtp:hover{
+    background:#1d4ed8;
+}
+
+#verifyOtp{
+    background:#7c3aed;
+}
+
+#verifyOtp:hover{
+    background:#6d28d9;
+}
+
+#logoutBtn{
+    background:#dc2626;
+}
+
+#logoutBtn:hover{
+    background:#991b1b;
+}
+
+/* Status */
+
+#status,
+#loginStatus{
+    margin-top:12px;
+    font-weight:600;
+    color:#16a34a;
+    text-align:center;
+}
+
+/* Search */
+
+#searchInput{
+    margin-bottom:20px;
+}
+
+/* Table */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+thead{
+    background:#dc2626;
+    color:white;
+}
+
+th,
+td{
+    padding:14px;
+    border-bottom:1px solid #e5e7eb;
+    text-align:center;
+}
+
+tbody tr:nth-child(even){
+    background:#f8fafc;
+}
+
+tbody tr:hover{
+    background:#fee2e2;
+}
+
+/* Delete Button */
+
+.delete-btn{
+    background:#ef4444;
+    padding:8px 14px;
+    border-radius:8px;
+}
+
+.delete-btn:hover{
+    background:#b91c1c;
+}
+
+/* Hidden */
+
+.hidden{
+    display:none;
+}
+
+/* Footer */
+
+footer{
+    margin-top:25px;
+    text-align:center;
+    color:#6b7280;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.container{
+    padding:20px;
+}
+
+.nav{
+    flex-direction:column;
+}
+
+table,
+thead,
+tbody,
+tr,
+td,
+th{
+    display:block;
+}
+
+thead{
+    display:none;
+}
+
+tr{
+    background:#fff;
+    margin-bottom:15px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    padding:10px;
+}
+
+td{
+    text-align:right;
+    padding-left:50%;
+    position:relative;
+}
+
+td::before{
+    position:absolute;
+    left:10px;
+    font-weight:600;
+}
+
+td:nth-child(1)::before{
+    content:"Name";
+}
+
+td:nth-child(2)::before{
+    content:"Email";
+}
+
+td:nth-child(3)::before{
+    content:"Phone";
+}
+
+td:nth-child(4)::before{
+    content:"Location";
+}
+
+td:nth-child(5)::before{
+    content:"Action";
+}
+
+}
